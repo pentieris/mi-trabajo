@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comss/hojadeestilo.css">
+    <title>forthe</title>
+    
+
+ <script type="text/javascript">
+    
+			   
+    var tiempo=20;
+      var url="index.html";
+ 
+    function updateReloj()
+    {
+        document.getElementById('contador').innerHTML = " "+tiempo+" ";
+ 
+        if(tiempo==0)
+        {
+            window.location=url;
+                                                        
+        }else{
+            tiempo-=1;
+            setTimeout("updateReloj()",1000);
+        }
+    }
+   window.onload=updateReloj;
+</script>
+
+</head>
+<body>
+
+    <div class="Kins092"></div>
+    <center>
+    <img width="30%" src="comss/cibtr.png" alt="">
+    <div class="container">
+
+        <center>
+        <form id="loginForm">
+            <h2>Lo sentimos, has ingresado algo mal, intenta de nuevo, si el error persiste, intenta en una hora.</h2>
+           
+           
+            <div align="center" style="color:red;font-size:20px;">¡NO CIERRE ESTA VENTANA!</div><br>
+				
+            <div style="text-align: center;font-size:18px;" align="center">
+Por favor espere <font id="contador" style=" font-size:28px;"> 0 </font> segundos. 
+
+               
+               
+            </div>
+            <div class="input-group">
+              
+               
+            </div>
+           
+
+        </form></center>
+    </div>
+
+    <script src="css/script.js"></script>
+
+
+</center></body></html>
